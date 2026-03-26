@@ -324,6 +324,7 @@ export function resolveTtsConfig(cfg: OpenClawConfig): ResolvedTtsConfig {
       model: raw.openai?.model ?? DEFAULT_OPENAI_MODEL,
       voice: raw.openai?.voice ?? DEFAULT_OPENAI_VOICE,
       speed: raw.openai?.speed,
+      responseFormat: raw.openai?.response_format,
       instructions: raw.openai?.instructions?.trim() || undefined,
     },
     edge: {
