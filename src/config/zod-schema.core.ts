@@ -442,6 +442,7 @@ export const TtsConfigSchema = z
         model: z.string().optional(),
         voice: z.string().optional(),
         speed: z.number().min(0.25).max(4).optional(),
+        response_format: z.enum(["mp3", "opus", "aac", "flac", "wav", "pcm"]).optional(),
         instructions: z.string().optional(),
       })
       .strict()
